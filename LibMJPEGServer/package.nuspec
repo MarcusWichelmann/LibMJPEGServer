@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>$id$</id>
+    <!--*-->
+    <version>1.0.0</version>
+    <title>
+    </title>
+    <!--*-->
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <projectUrl>https://github.com/MarcusWichelmann/LibMJPEGServer</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <!--*-->
+    <description>$description$</description>
+    <!--*-->
+    <releaseNotes>Initial&amp;#x0020;release</releaseNotes>
+    <copyright>$copyright$</copyright>
+    <tags>
+    </tags>
+    <dependencies>
+   <group targetFramework="net452">
+      <dependency id="LibThreadedSockets" version="1.0.3" />
+   </group>
+</dependencies>
+  </metadata>
+</package>
