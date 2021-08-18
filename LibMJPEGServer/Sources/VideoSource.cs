@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace LibMJPEGServer.Sources
 {
-    public abstract class VideoSource
+    public interface VideoSource
     {
-        public abstract event EventHandler<FrameCapturedEventArgs> FrameCaptured;
+        event EventHandler<FrameCapturedEventArgs> FrameCaptured;
 
-        public abstract void StartCapture();
-        public abstract void StopCapture();
+        void StartCapture();
+        void StopCapture();
     }
 }

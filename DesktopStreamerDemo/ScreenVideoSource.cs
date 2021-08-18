@@ -23,7 +23,7 @@ namespace DesktopStreamerDemo
         private Bitmap _previewImage = null;
         private bool _updatePreview = true;
 
-        public override event EventHandler<FrameCapturedEventArgs> FrameCaptured;
+        public event EventHandler<FrameCapturedEventArgs> FrameCaptured;
 
         public ScreenVideoSource(Screen screen, int screenId)
         {
@@ -33,8 +33,8 @@ namespace DesktopStreamerDemo
             _updateTimer.Elapsed += _updateTimer_Elapsed;
         }
 
-        public override void StartCapture() => _updateTimer.Start();
-        public override void StopCapture() => _updateTimer.Stop();
+        public void StartCapture() => _updateTimer.Start();
+        public void StopCapture() => _updateTimer.Stop();
 
         public Image QueryPreviewImage()
         {

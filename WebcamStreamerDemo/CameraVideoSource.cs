@@ -16,7 +16,7 @@ namespace WebcamStreamerDemo
 
         private Mat _currentFrame = new Mat();
 
-        public override event EventHandler<FrameCapturedEventArgs> FrameCaptured;
+        public event EventHandler<FrameCapturedEventArgs> FrameCaptured;
 
         public CameraVideoSource()
         {
@@ -26,8 +26,8 @@ namespace WebcamStreamerDemo
             _capture.ImageGrabbed += OnImageGrabbed;
         }
 
-        public override void StartCapture() => _capture.Start();
-        public override void StopCapture() => _capture.Stop();
+        public void StartCapture() => _capture.Start();
+        public void StopCapture() => _capture.Stop();
 
         private void OnImageGrabbed(object sender, EventArgs e)
         {
