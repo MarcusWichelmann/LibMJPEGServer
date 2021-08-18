@@ -16,7 +16,7 @@ namespace LibMJPEGServer.Sources
         private Image _testFrame = new Bitmap(1280, 720);
         private Graphics _graphics;
 
-        public override event EventHandler<FrameCapturedEventArgs> FrameCaptured;
+        public event EventHandler<FrameCapturedEventArgs> FrameCaptured;
 
         public TestVideoSource()
         {
@@ -29,8 +29,8 @@ namespace LibMJPEGServer.Sources
             _updateTimer.Elapsed += OnElapsed;
         }
 
-        public override void StartCapture() => _updateTimer.Start();
-        public override void StopCapture() => _updateTimer.Stop();
+        public void StartCapture() => _updateTimer.Start();
+        public void StopCapture() => _updateTimer.Stop();
 
         private void OnElapsed(object sender, ElapsedEventArgs e)
         {
